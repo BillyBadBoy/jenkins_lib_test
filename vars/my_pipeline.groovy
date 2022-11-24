@@ -16,6 +16,9 @@ def call(body) {
           dir ('bar') {
             writeFile file:'bar.txt', text:'goodbye world'
           }
+          dir ('one/two') {
+            writeFile file:'three.txt', text:'blah blah blah'
+          }
         }
       }
     }
