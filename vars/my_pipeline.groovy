@@ -10,6 +10,9 @@ def call(body) {
       stage('Echo from the other side!!!') {
         steps {
           echo "${config.message}"
+          dir ('foo') {
+            writeFile file:'foo.txt', text:'hellow world'
+          }
         }
       }
     }
