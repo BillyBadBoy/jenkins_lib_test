@@ -12,9 +12,9 @@ def call(body) {
           echo "${config.message}"
           dir ('foo') {
             writeFile file:'foo.txt', text:'hello world'
-            dir ('bar') {
-              writeFile file:'bar.txt', text:'goodbye world'
-            }
+          }
+          dir ('bar') {
+            writeFile file:'bar.txt', text:'goodbye world'
           }
         }
       }
