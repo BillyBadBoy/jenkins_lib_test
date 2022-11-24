@@ -11,7 +11,10 @@ def call(body) {
         steps {
           echo "${config.message}"
           dir ('foo') {
-            writeFile file:'foo.txt', text:'hellow world'
+            writeFile file:'foo.txt', text:'hello world'
+            dir ('bar') {
+              writeFile file:'bar.txt', text:'goodbye world'
+            }
           }
         }
       }
